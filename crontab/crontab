@@ -1,0 +1,6 @@
+50 23 * * * /usr/sbin/sntp -P no -r stdtime.sinica.edu.tw &> /dev/null
+51 23 * * * /bin/date; /sbin/hwclock -w &> /dev/null
+58 23 * * * /usr/local/sbin/pick_ssh &> /dev/null
+59 23 * * * /bin/cat /tmp/ip.deny >> /etc/ip.deny
+0 0 * * * /etc/init.d/nat restart
+1 0 * * * /etc/init.d/fail2ban restart
