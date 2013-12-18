@@ -86,6 +86,7 @@ sort -n $TMPFILE.ssh.ip |uniq -c > $TMPFILE.ssh.ipaccount
 echo "#$TODAY" > $TMPFILE.ipdeny
 grep "$TODAY_numerical" $FAIL2BAN_MESSAGE_FILE | grep 'ssh-iptables' | grep 'Ban' | awk '{print $7}' >> $TMPFILE.ipdeny
 grep "$TODAY_numerical" $FAIL2BAN_MESSAGE_FILE | grep 'Owncloud' | grep 'Ban' | awk '{print $7}' >> $TMPFILE.ipdeny
+#grep "$TODAY_numerical" $FAIL2BAN_MESSAGE_FILE | grep 'apache-shorewall' | grep 'Ban' | awk '{print $7}' >> $TMPFILE.ipdeny
 #awk "{if (\$1 > $NUM) {print \$2}}" $TMPFILE.ssh.ipaccount >> $TMPFILE.ipdeny
 cp $TMPFILE.ipdeny /tmp/ip.deny
 
