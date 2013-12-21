@@ -36,7 +36,8 @@
 			<img class="svg" id="password-icon" src="<?php print_unescaped(image_path('', 'actions/password.svg')); ?>" alt=""/>
 		</p>
 		<?php if ($_['rememberLoginAllowed'] === true) : ?>
-		<input type="checkbox" name="remember_login" value="1" id="remember_login" checked /><label
+<!--		<input type="checkbox" name="remember_login" value="1" id="remember_login" checked /><label -->
+		<input type="checkbox" name="remember_login" value="1" id="remember_login"/><label
 			for="remember_login"><?php p($l->t('remember')); ?></label>
 		<?php endif; ?>
 		<input type="hidden" name="timezone-offset" id="timezone-offset"/>
